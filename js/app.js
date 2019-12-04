@@ -29,6 +29,9 @@ setCards();
 
 // event that will accure when player click card
 function clicked(Event){
+ if(Event.target.classList.contains('show')||Event.target.nodeName==='I'){
+    //No event happens when the card allready open
+    }else{
      moves+=1;
      score(moves);
     Event.target.className='card open show';
@@ -40,6 +43,7 @@ function clicked(Event){
      setTimeout(matched,700,openCards);
 
   }//end of else
+ }//end of if
 }//end of function
 
 

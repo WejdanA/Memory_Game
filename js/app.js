@@ -15,7 +15,7 @@ let shuffledCardsName;//name of classes that reperesent the symbol in each card 
 let timer=0;
 let stars=0;
 let totalStars=0; //represent the total no of stars was gained
-
+let totalGames=0;
 
 
 //assign the shuffled cards
@@ -84,6 +84,7 @@ function restart(){
 function isFinished(){
   if(document.querySelectorAll('.match').length===16){
     totalStars+=stars;
+   totalGames+=1;
     return true;
   }
   else{
@@ -111,7 +112,7 @@ function congralationMeassage(){
     if (confirm(`Congralation !!!\n you won the game in ${timer/1000} S and with ${moves} moves and ${stars} stars\n Do you want to play again ?\n press ok for countinue or cansel to exit`)) {
     restart();
   } else {
-    alert( `Sad to see you leaving ): rounds Your total score is ${totalStars} stars`);
+    alert( `Sad to see you leaving ):You played ${totalGames} rounds Your total score is ${totalStars} stars`);
     close();
    }//end of else
  } //end of if

@@ -74,6 +74,7 @@ document.querySelector('div.restart').addEventListener('click', restart);
 //restart or replay the Game
 function restart(){
   moves=0;
+ timer=0;
   score(moves);
   for(let i=0;i<cards.length;i++){
     cards[i].className='card';}
